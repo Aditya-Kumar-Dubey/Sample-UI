@@ -6,6 +6,13 @@
 // Include the core styles required for Angular Material
 @include mat.core();
 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html,
 body {
     height: 100%;

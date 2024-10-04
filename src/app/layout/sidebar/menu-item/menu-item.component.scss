@@ -11,3 +11,7 @@
     border-left-color: var(--primary-color);
     background: rgba(0, 0, 0, 0.05);
 }
+
+.indented {
+    --mat-list-list-item-leading-icon-start-space: 48px;
+}

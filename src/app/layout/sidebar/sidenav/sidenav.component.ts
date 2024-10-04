@@ -34,14 +34,38 @@ export class SidenavComponent {
 
   menuItems = signal<MenuItem[]>([
     {
-      icon: 'analytics',
-      label: 'Analytics',
-      route: 'login'
+      icon: 'security_key',
+      label: 'Authentication',
+      route: 'auth',
+      subItems: [
+        {
+          icon: 'pin',
+          label: 'Login',
+          route: 'login'
+        },
+        {
+          icon: 'app_registration',
+          label: 'Registration',
+          route: 'register'
+        },
+      ]
     },
     {
-      icon: 'comment',
-      label: 'Comments',
-      route: 'register'
+      icon: 'visibility',
+      label: 'Views',
+      route: 'view',
+      subItems: [
+        {
+          icon: 'error',
+          label: '404',
+          route: 'page-not-found'
+        },
+        {
+          icon: 'warning',
+          label: '500',
+          route: 'server-error'
+        },
+      ]
     },
   ]);
 
