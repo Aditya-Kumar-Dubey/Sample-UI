@@ -1,0 +1,103 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.carousel-container {
+	position: relative;
+	// max-width: 90%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2em;
+	background: gray;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	border-radius: 0.25em;
+}
+
+.carousel {
+	display: flex;
+	gap: 1em;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	scroll-snap-type: x mandatory;
+	padding-bottom: 1em;
+}
+
+.product-card {
+	flex: 0 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #333;
+	border-radius: 0.25em;
+	padding: 1em;
+	gap: 1em;
+	scroll-snap-align: center;
+	width: 20em;
+	color: #ccc;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
+
+.product-card img {
+	width: 100%;
+}
+
+.product-card h3,
+.product-card p {
+	text-align: center;
+	margin: 0;
+	color: #fff;
+}
+
+.product-card p {
+	color: #aaa;
+}
+
+.product-card .buy-btn {
+	padding: 0.8em 2em;
+	background-color: #ccc;
+	color: #101010;
+	border: none;
+	border-radius: 0.25em;
+	cursor: pointer;
+	font-size: 14px;
+	align-self: center;
+}
+
+.product-card .buy-btn:hover {
+	background-color: #eaeaea;
+}
+
+.product-card:hover {
+	background-color: #444;
+}
+
+.carousel {
+	scrollbar-width: thin;
+	scrollbar-color: #444 #000;
+}
+
+.carousel::-webkit-scrollbar {
+	height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+	background-color: #444;
+	border-radius: 10px;
+}
+
+.carousel::-webkit-scrollbar-track {
+	background-color: #000;
+}
+
+/* Styling for larger screens */
+@media (min-width: 1024px) {
+	.carousel-container {
+		max-width: 80%;
+	}
+}

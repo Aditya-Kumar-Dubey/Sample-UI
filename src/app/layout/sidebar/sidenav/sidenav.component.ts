@@ -21,7 +21,7 @@ export type MenuItem = {
     MatIconModule,
     RouterModule,
     MenuItemComponent
-],
+  ],
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.scss'
 })
@@ -48,6 +48,11 @@ export class SidenavComponent {
           label: 'Registration',
           route: 'register'
         },
+        {
+          icon: 'app_registration',
+          label: 'Forget Password',
+          route: 'forget-password'
+        },
       ]
     },
     {
@@ -64,6 +69,62 @@ export class SidenavComponent {
           icon: 'warning',
           label: '500',
           route: 'server-error'
+        },
+      ]
+    },
+    {
+      icon: 'view_agenda',
+      label: 'Cards',
+      route: 'cards',
+      subItems: [
+        {
+          icon: 'view_day',
+          label: 'Service Card',
+          route: 'service-card'
+        },
+        {
+          icon: 'view_day',
+          label: 'Profile Card',
+          route: 'p-card'
+        },
+        {
+          icon: 'view_day',
+          label: 'Price Card',
+          route: 'price-card'
+        },
+      ]
+    },
+    {
+      icon: 'table',
+      label: 'Tables',
+      route: 'tables',
+      subItems: [
+        {
+          icon: 'filter',
+          label: 'Filter Table',
+          route: 'filter-table'
+        },
+        {
+          icon: 'filter',
+          label: 'Simple Table',
+          route: 's-table'
+        },
+      ]
+    },
+    {
+      icon: 'shoppingmode',
+      label: 'E-Ecommerce',
+      route: 'e-comm',
+      subItems: [
+        {
+          icon: 'shopping_cart_checkout',
+          label: 'Checkout',
+          route: 'checkout'
+        },
+        {
+          icon: 'view_agenda',
+          label: 'Product-Carousel',
+          route: 'product-carousel'
         },
       ]
     },

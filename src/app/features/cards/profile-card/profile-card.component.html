@@ -1,0 +1,61 @@
+<div class="main">
+    <div class="container">
+        <div class="card" id="profileCard" (click)="toggleActive()" [class.active]="isActive">
+            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Profile Picture" class="noSelect">
+            <h2 class="noSelect">John Doe</h2>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="info-box" id="infoBox" [class.active]="isActive">
+            <h2 class="noSelect">About Me</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quibusdam delectus? Officia optio
+                eveniet
+                molestias explicabo culpa quos delectus ratione laudantium. Laborum obcaecati totam quasi animi illum
+                veritatis laboriosam veniam?
+                Quis impedit eveniet, asperiores atque neque debitis aliquid quisquam, odit itaque reprehenderit quidem!
+                Exercitationem aperiam dolore laborum aliquam, vitae incidunt animi mollitia amet. Impedit, qui!
+                Provident,
+                dicta molestiae. Exercitationem, voluptates.</p>
+
+            <div class="pills">
+                <span class="pill">JavaScript</span>
+                <span class="pill">Python</span>
+                <span class="pill">Java</span>
+                <span class="pill">C#</span>
+                <span class="pill">HTML</span>
+                <span class="pill">CSS</span>
+                <span class="pill">SQL</span>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="bg"></div> -->
+    <div class="bcard">
+
+        <div class="top">
+            <p class="category">Nature</p>
+        </div>
+
+        <div class="bottom">
+            <h2><a href="#">Mountains</a></h2>
+            <div class="author">
+                <div class="profile"></div>
+                <p class="name">By <a>Suzan Hill</a></p>
+            </div>
+            <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consectetur mauris sed
+                mauris sagittis, nec pretium metus posuere. </p>
+            <div class="info">
+                <mat-icon >time</mat-icon>
+                <p class="info">2 days ago</p>
+                <mat-icon >chatboxes</mat-icon>
+                <p class="info"><a>13 comments</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+
+</div>

@@ -133,11 +133,13 @@ form .button input {
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    // background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background: deepskyblue;
 }
 
 form .button input:hover {
-    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    // background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    background: rgb(0, 149, 255);
 }
 
 /* Responsive media query code for mobile devices */
