@@ -8,6 +8,7 @@ import { MenuItemComponent } from "../menu-item/menu-item.component";
 export type MenuItem = {
   icon: string;
   label: string;
+  title?: string;
   route: string
   subItems?: MenuItem[];
 }
@@ -51,6 +52,7 @@ export class SidenavComponent {
         {
           icon: 'app_registration',
           label: 'Forget Password',
+          title: 'Forget Password',
           route: 'forget-password'
         },
       ]
@@ -80,16 +82,19 @@ export class SidenavComponent {
         {
           icon: 'view_day',
           label: 'Service Card',
+          title: 'Service Card',
           route: 'service-card'
         },
         {
           icon: 'view_day',
           label: 'Profile Card',
+          title: 'Profile Card',
           route: 'p-card'
         },
         {
           icon: 'view_day',
           label: 'Price Card',
+          title: 'Price Card',
           route: 'price-card'
         },
       ]
@@ -107,6 +112,7 @@ export class SidenavComponent {
         {
           icon: 'filter',
           label: 'Simple Table',
+          title: 'Simple Table',
           route: 's-table'
         },
       ]
@@ -119,12 +125,26 @@ export class SidenavComponent {
         {
           icon: 'shopping_cart_checkout',
           label: 'Checkout',
+          title: 'Checkout',
           route: 'checkout'
         },
         {
           icon: 'view_agenda',
           label: 'Product-Carousel',
+          title: 'Product-Carousel',
           route: 'product-carousel'
+        },
+        {
+          icon: 'view_agenda',
+          label: 'Add To Cart',
+          title: 'Add To Cart',
+          route: 'add-to-cart'
+        },
+        {
+          icon: 'view_agenda',
+          label: 'Credit Card Checkout',
+          title: 'Credit Card Checkout',
+          route: 'crdt-crd-ckout'
         },
       ]
     },

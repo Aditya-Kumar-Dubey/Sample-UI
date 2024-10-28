@@ -16,6 +16,8 @@ import { SimpleTableComponent } from './features/tables/simple-table/simple-tabl
 import { EcommercePagesComponent } from './features/ecommerce-pages/ecommerce-pages.component';
 import { CheckoutComponent } from './features/ecommerce-pages/checkout/checkout.component';
 import { CardCarouselComponent } from './features/ecommerce-pages/card-carousel/card-carousel.component';
+import { AddToCartComponent } from './features/ecommerce-pages/add-to-cart/add-to-cart.component';
+import { CreditCardCkoutComponent } from './features/ecommerce-pages/credit-card-ckout/credit-card-ckout.component';
 
 export const routes: Routes = [
     {
@@ -102,6 +104,14 @@ export const routes: Routes = [
             {
                 path: 'product-carousel',
                 component: CardCarouselComponent
+            },
+            {
+                path: 'add-to-cart',
+                component: AddToCartComponent
+            },
+            {
+                path: 'crdt-crd-ckout',
+                component: CreditCardCkoutComponent
             },
         ]
     }
