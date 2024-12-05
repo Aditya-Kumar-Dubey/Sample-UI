@@ -146,6 +146,12 @@ export class SidenavComponent {
           title: 'Credit Card Checkout',
           route: 'crdt-crd-ckout'
         },
+        {
+          icon: 'view_agenda',
+          label: 'Product Detail',
+          title: 'Product Detail',
+          route: 'product-detail'
+        },
       ]
     },
   ]);

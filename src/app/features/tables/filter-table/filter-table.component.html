@@ -1,1 +1,30 @@
-<p>filter-table works!</p>
+<!-- <input type="file" (change)="onFileChange($event)" />
+<table border="1">
+    <tr *ngFor="let row of data; let rowIndex = index">
+        <td *ngFor="let cell of row; let colIndex = index">
+            <input type="text" [(ngModel)]="data[rowIndex][colIndex]"
+                (change)="onCellEdit(rowIndex, colIndex, $event)" />
+        </td>
+    </tr>
+</table>
+<button (click)="saveAsExcel()">Save as Excel</button> -->
+
+<input type="file" (change)="onFileChange($event)" />
+<div style="overflow-x: auto; margin-top: 10px;">
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let header of data[0]">Header</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of data; let rowIndex = index">
+                <td *ngFor="let cell of row; let colIndex = index">
+                    <input type="text" [(ngModel)]="data[rowIndex][colIndex]"
+                        (change)="onCellEdit(rowIndex, colIndex, $event)" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<button (click)="saveAsExcel()" style="margin-top: 10px;">Save as Excel</button>

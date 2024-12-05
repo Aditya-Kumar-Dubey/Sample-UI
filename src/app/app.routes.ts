@@ -18,6 +18,7 @@ import { CheckoutComponent } from './features/ecommerce-pages/checkout/checkout.
 import { CardCarouselComponent } from './features/ecommerce-pages/card-carousel/card-carousel.component';
 import { AddToCartComponent } from './features/ecommerce-pages/add-to-cart/add-to-cart.component';
 import { CreditCardCkoutComponent } from './features/ecommerce-pages/credit-card-ckout/credit-card-ckout.component';
+import { ProductDetailComponent } from './features/ecommerce-pages/product-detail/product-detail.component';
 
 export const routes: Routes = [
     {
@@ -112,6 +113,10 @@ export const routes: Routes = [
             {
                 path: 'crdt-crd-ckout',
                 component: CreditCardCkoutComponent
+            },
+            {
+                path: 'product-detail',
+                component: ProductDetailComponent
             },
         ]
     }

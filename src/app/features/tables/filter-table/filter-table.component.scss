@@ -1,21 +1,64 @@
 .example-container {
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
-  }
-  
-  .example-header {
-    min-height: 64px;
-    padding: 8px 24px 0;
-  }
-  
-  .mat-form-field {
-    font-size: 14px;
-    width: 100%;
-  }
-  
-  .mat-table {
-    overflow: auto;
-    max-height: 500px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.example-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Keeps columns aligned when resized */
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Make table columns resizable */
+table th, table td {
+  resize: horizontal;
+  overflow: auto;
+}
+
+input[type="text"] {
+  width: 100%; /* Makes the input fill the cell */
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+/* Hover effects */
+table th:hover, table td:hover {
+  background-color: #e2e2e2;
+  cursor: pointer;
+}
