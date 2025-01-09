@@ -115,6 +115,12 @@ export class SidenavComponent {
           title: 'Simple Table',
           route: 's-table'
         },
+        {
+          icon: 'filter',
+          label: 'Editable Table',
+          title: 'Editable Table',
+          route: 'editable-table'
+        },
       ]
     },
     {
@@ -151,6 +157,12 @@ export class SidenavComponent {
           label: 'Product Detail',
           title: 'Product Detail',
           route: 'product-detail'
+        },
+        {
+          icon: 'view_agenda',
+          label: 'Checkout Flow',
+          title: 'Checkout Flow',
+          route: 'product-list'
         },
       ]
     },

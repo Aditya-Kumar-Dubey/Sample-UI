@@ -1,7 +1,7 @@
 import { Component, input, signal } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MenuItem } from '../sidenav/sidenav.component';
 import { animate, style, transition, trigger } from '@angular/animations';
 
@@ -25,6 +25,8 @@ import { animate, style, transition, trigger } from '@angular/animations';
 })
 export class MenuItemComponent {
 
+  constructor(private router: Router) {}
+
   item = input.required<MenuItem>()
 
   collapsed = input(false);
@@ -36,6 +38,15 @@ export class MenuItemComponent {
      return; 
     }
     this.nestedMenuOpen.set(!this.nestedMenuOpen());
+  }
+
+  navigate() {
+    const route = this.item().route;
+    if (route) {
+      this.router.navigate([route]).catch((error) => {
+        console.error('Navigation error:', error);
+      });
+    }
   }
 
 }

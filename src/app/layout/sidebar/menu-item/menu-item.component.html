@@ -1,7 +1,9 @@
-<a mat-list-item class="menu-item" (click)="toggleNested()" [routerLink]="item().route"
-    routerLinkActive="selected-menu-item" #rla="routerLinkActive" [activated]="rla.isActive">
-    <mat-icon [fontSet]="rla.isActive ? 'material-icons' : 'material-icons-outlined'" matListItemIcon>{{ item().icon
-        }}</mat-icon>
+<a mat-list-item class="menu-item" (click)="item().subItems ? toggleNested() : navigate()"
+    [routerLink]="!item().subItems ? item().route : null" routerLinkActive="selected-menu-item" #rla="routerLinkActive"
+    [activated]="rla.isActive">
+    <mat-icon [fontSet]="rla.isActive ? 'material-icons' : 'material-icons-outlined'" matListItemIcon>
+        {{ item().icon }}
+    </mat-icon>
     @if (!collapsed()) {
     <span matListItemTitle>{{ item().label }}</span>
     }
@@ -19,10 +21,11 @@
 @if (item().subItems && nestedMenuOpen()) {
 <div @expandContractMenu>
     @for (subItem of item().subItems; track subItem.label) {
-    <a mat-list-item class="menu-item" [class.indented]="!collapsed()" [routerLink]="item().route + '/' + subItem.route" [title]="subItem.title"
-        routerLinkActive #rla="routerLinkActive" [activated]="rla.isActive">
-        <mat-icon [fontSet]="rla.isActive ? 'material-icons' : 'material-icons-outlined'" matListItemIcon>{{ subItem.icon
-            }}</mat-icon>
+    <a mat-list-item class="menu-item" [class.indented]="!collapsed()" [routerLink]="item().route + '/' + subItem.route"
+        [title]="subItem.title" routerLinkActive #rla="routerLinkActive" [activated]="rla.isActive">
+        <mat-icon [fontSet]="rla.isActive ? 'material-icons' : 'material-icons-outlined'" matListItemIcon>
+            {{ subItem.icon }}
+        </mat-icon>
         @if (!collapsed()) {
         <span matListItemTitle>{{ subItem.label }}</span>
         }
