@@ -21,6 +21,7 @@ import { CreditCardCkoutComponent } from './features/ecommerce-pages/credit-card
 import { ProductDetailComponent } from './features/ecommerce-pages/product-detail/product-detail.component';
 import { ProductListComponent } from './features/ecommerce-pages/CheckoutFlow/product-list/product-list.component';
 import { EditableTableComponent } from './features/tables/editable-table/editable-table.component';
+import { TransactionListComponent } from './features/tables/transaction-list/transaction-list.component';
 
 export const routes: Routes = [
     {
@@ -97,6 +98,10 @@ export const routes: Routes = [
             {
                 path: 'editable-table',
                 component: EditableTableComponent
+            },
+            {
+                path: 'transaction-table',
+                component: TransactionListComponent
             },
         ]
     },

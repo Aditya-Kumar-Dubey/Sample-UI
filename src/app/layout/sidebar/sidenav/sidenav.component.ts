@@ -58,23 +58,6 @@ export class SidenavComponent {
       ]
     },
     {
-      icon: 'visibility',
-      label: 'Views',
-      route: 'view',
-      subItems: [
-        {
-          icon: 'error',
-          label: '404',
-          route: 'page-not-found'
-        },
-        {
-          icon: 'warning',
-          label: '500',
-          route: 'server-error'
-        },
-      ]
-    },
-    {
       icon: 'view_agenda',
       label: 'Cards',
       route: 'cards',
@@ -101,25 +84,32 @@ export class SidenavComponent {
     },
     {
       icon: 'table',
-      label: 'Tables',
+      label: 'Lists',
       route: 'tables',
       subItems: [
         {
           icon: 'filter',
-          label: 'Filter Table',
+          label: 'Filter List',
+          title: 'Filter List',
           route: 'filter-table'
         },
         {
           icon: 'filter',
-          label: 'Simple Table',
-          title: 'Simple Table',
+          label: 'Simple List',
+          title: 'Simple List',
           route: 's-table'
         },
         {
           icon: 'filter',
-          label: 'Editable Table',
-          title: 'Editable Table',
+          label: 'Editable List',
+          title: 'Editable List',
           route: 'editable-table'
+        },
+        {
+          icon: 'filter',
+          label: 'Transaction List',
+          title: 'Transaction List',
+          route: 'transaction-table'
         },
       ]
     },
@@ -163,6 +153,23 @@ export class SidenavComponent {
           label: 'Checkout Flow',
           title: 'Checkout Flow',
           route: 'product-list'
+        },
+      ]
+    },
+    {
+      icon: 'visibility',
+      label: 'Views',
+      route: 'view',
+      subItems: [
+        {
+          icon: 'error',
+          label: '404',
+          route: 'page-not-found'
+        },
+        {
+          icon: 'warning',
+          label: '500',
+          route: 'server-error'
         },
       ]
     },
